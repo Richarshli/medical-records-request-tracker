@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Medical Records Request Tracker</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="container">
+    <h1>Medical Records Request Tracker</h1>
+    <p>Track medical records requests, request status, and completion notes.</p>
+
+    <input type="text" id="patientName" placeholder="Patient Name">
+    <input type="text" id="requestType" placeholder="Request Type">
+    <input type="date" id="requestDate">
+
+    <select id="status">
+      <option value="Pending">Pending</option>
+      <option value="In Progress">In Progress</option>
+      <option value="Completed">Completed</option>
+      <option value="Escalated">Escalated</option>
+    </select>
+
+    <textarea id="notes" placeholder="Notes"></textarea>
+
+    <button onclick="addRequest()">Add Request</button>
+
+    <h2>Request Log</h2>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Patient</th>
+          <th>Request Type</th>
+          <th>Date</th>
+          <th>Status</th>
+          <th>Notes</th>
+        </tr>
+      </thead>
+      <tbody id="requestTable"></tbody>
+    </table>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
